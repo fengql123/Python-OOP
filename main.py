@@ -29,10 +29,11 @@ class Item:
             reader = csv.DictReader(f)
             items = list(reader)
         for item in items:
-            Item(name=item.get('name'),
-                 price=float(item.get('price')),
-                 quantity=int(item.get('quantity'))
-                 )
+            Item(
+                item['name'],
+                float(item[' price']),
+                float(item[' quantity'])
+            )
 
     # Static Method (like a function not related with the instances)
     @staticmethod
